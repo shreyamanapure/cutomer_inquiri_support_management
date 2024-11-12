@@ -56,7 +56,7 @@ if st.button("Classify Ticket"):
         scaled_text = minmax.transform(vectorized_text)
 
         # Predict and display the output
-        prediction = rf_clf.predict(scaled_text)
+        prediction = clf.predict(scaled_text)
         predicted_class = le.inverse_transform(prediction)[0]
 
         st.write(f"Predicted Class: **{predicted_class}**")
